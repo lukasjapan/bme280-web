@@ -1,0 +1,1 @@
+<%=raw @data.map { |d| { ts: d.timestamp.to_i, t: d.t.round(2), p: d.p.round(2), h: d.h.round(2) } }.to_json %>

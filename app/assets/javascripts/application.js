@@ -12,4 +12,8 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery
+//= require jquery_ujs
+//= require moment-with-locales.min.js
+//= require Chart.min
 //= require_tree .

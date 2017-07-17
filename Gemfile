@@ -53,5 +53,16 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
+# --- bme280-web ---
+
 # BME280 interface
 gem 'i2c-bme280'
+
+# jQuery
+gem 'jquery-rails'
+
+# chart.js
+gem 'chart-js-rails'
+
+# milligram (css framework)
+gem 'milligram'

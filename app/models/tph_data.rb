@@ -1,0 +1,2 @@
+class TphData < ApplicationRecord
+end
