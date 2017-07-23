@@ -58,6 +58,9 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # BME280 interface
 gem 'i2c-bme280'
 
+# Webpacker
+gem 'webpacker'
+
 # jQuery
 gem 'jquery-rails'
 

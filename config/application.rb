@@ -14,5 +14,8 @@ module Bme280Web
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
+
+    # I2C device id on the RaspberryPi
+    config.x.bme280.i2c_device_id = 1
   end
 end
