@@ -33,9 +33,9 @@
                         <el-input-number v-model="t.range" :min="1"></el-input-number>
                     </el-form-item>
                     <el-form-item label="Pressure Range">
-                        <el-input-number v-model="p.base"></el-input-number>
+                        <el-input-number v-model="p.base" :step="10"></el-input-number>
                         &plusmn;
-                        <el-input-number v-model="p.range" :step="50" :min="50"></el-input-number>
+                        <el-input-number v-model="p.range" :step="10" :min="10"></el-input-number>
                     </el-form-item>
                 </el-form>
             </el-col>
