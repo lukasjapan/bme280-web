@@ -4,8 +4,7 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-# Ignore bundler config, etc
-/.bundle
+# RubyMine
 /.idea
 
 # Ignore the default SQLite database.
@@ -15,15 +14,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
-!/log/.keep
-!/tmp/.keep
 
+# Yarn
 /node_modules
 /yarn-error.log
 
-.byebug_history
-
 # Cache etc
-/vendor/*
-/tmp/*/public/packs
+/vendor
+/tmp
 /node_modules

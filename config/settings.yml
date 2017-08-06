@@ -1,0 +1,14 @@
+webpacker_dev_server:
+  config: config/webpack.development.config.js
+  host: localhost
+  port: 8081
+  color: true
+  hot: true
+
+logger:
+  interval: 1.0
+  background: false
+  fakedata: true
+
+i2c_bme280:
+  device_id: 1

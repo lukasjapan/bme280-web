@@ -1,4 +1,4 @@
 # Procfile for development
-rails: bundle exec rails server
-webpacker: ./bin/webpack-dev-server
-logger: bundle exec rake logger:fakedata
+web:        ./bin/bme280-web
+webpacker:  ./bin/webpack-dev-server
+logger:     ./bin/bme280-logger --fake
