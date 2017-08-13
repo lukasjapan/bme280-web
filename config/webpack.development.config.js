@@ -18,7 +18,7 @@ module.exports = {
     extensions: [ '.js' ]
   },
   output: {
-    path: path.resolve(__dirname, '/app/public'),
+    path: path.resolve(__dirname, '/public'),
     publicPath: 'http://' + settings.host + ':' + settings.port + '/',
     filename: '[name].js'
   },
