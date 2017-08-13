@@ -7,8 +7,8 @@ webpacker_dev_server:
 
 logger:
   interval: 1.0
-  background: false
-  fakedata: true
+  background: true
+  fakedata: false
 
 i2c_bme280:
   device_id: 1
