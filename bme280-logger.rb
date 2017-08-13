@@ -21,7 +21,7 @@ bme280 = if settings['logger']['fakedata']
 
 # Daemonize if requested
 if settings['logger']['background']
-  Process.daemon(true, true)
+  Process.daemon(true)
 end
 
 # Trigger for quitting the logger
@@ -30,6 +30,7 @@ $quit = false
 # tell logger to quit if signal is received
 Signal.trap('TERM') { puts 'TERM signal trapped.'; $quit = true }
 Signal.trap('SIGINT') { puts 'SIGINT signal trapped.'; $quit = true }
+Signal.trap('SIGHUP') { puts 'SIGHUP signal trapped.'; $quit = false }
 
 # sleep that is interrupted if the logger should quit
 def breakable_sleep(seconds:, step:)
@@ -43,7 +44,7 @@ end
 
 # Connect to db
 ActiveRecord::Base.establish_connection(database[env])
-ActiveRecord::Base.logger = Logger.new(STDOUT)
+ActiveRecord::Base.logger = Logger.new(STDOUT) if env == 'development'
 
 # log data until a quit signal is received
 loop do
