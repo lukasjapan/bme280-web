@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-row>
-            <el-col :md="12" v-loading="loading">
+            <el-col :md="12">
                 <temperature-graph :data="t_data" :base="t.base" :range="t.range" :from="from" :to="to" />
             </el-col>
             <el-col :md="12">
