@@ -2,7 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const settings = require('./config.js')
 const compressionPlugin = require('compression-webpack-plugin')
-const closureCompilerPlugin = require('webpack-closure-compiler');
+const closureCompilerPlugin = require('webpack-closure-compiler')
 
 module.exports = {
   entry: [
@@ -22,12 +22,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '../public'),
     filename: '[name].js'
-  },
-  devtool: 'cheap-eval-source-map',
-  devServer: {
-      clientLogLevel: 'none',
-    contentBase: './public',
-    headers: { 'Access-Control-Allow-Origin': '*' }
   },
   plugins: [
     new webpack.DefinePlugin({

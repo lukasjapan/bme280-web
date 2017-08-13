@@ -10,14 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170717045238) do
-
-  create_table "server_info", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "location"
-    t.datetime "timestamp"
-  end
+ActiveRecord::Schema.define(version: 20170717045223) do
 
   create_table "tph_data", id: false, force: :cascade do |t|
     t.datetime "timestamp"
