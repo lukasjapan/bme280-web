@@ -1,2 +1,0 @@
-class ServerInfo < ApplicationRecord
-end
