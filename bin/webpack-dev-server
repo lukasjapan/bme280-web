@@ -5,7 +5,7 @@ Bundler.setup
 require 'yaml'
 require 'shellwords'
 
-settings = YAML.load_file(File.expand_path('../config/settings.yml', File.dirname(__FILE__)))
+settings = YAML.load_file(File.expand_path('../config/settings-development.yml', File.dirname(__FILE__)))
 
 # Build arguments from config file
 arguments = settings['webpacker_dev_server'].map do |k, v|
