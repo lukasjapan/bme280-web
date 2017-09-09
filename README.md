@@ -3,16 +3,16 @@
 [![Build Status](https://travis-ci.org/lukasjapan/bme280-web.svg?branch=master)](https://travis-ci.org/lukasjapan/bme280-web)
 [![Coverage Status](https://coveralls.io/repos/github/lukasjapan/bme280-web/badge.svg?branch=master)](https://coveralls.io/github/lukasjapan/bme280-web?branch=master)
 
-Temperature, Humidity and Air pressure logging/visualization with the Bosch BME280 sensor. The frontend is reactive and uses live updates.
+Temperature, Humidity and Air pressure logging/visualization with the Bosch BME280 sensor. The frontend is reactive and does live updates.
 
 The following libraries are used:
 
-- [Sinatra](http://www.sinatrarb.com/) (Minimalistic Ruby Framework)
+- [Sinatra](http://www.sinatrarb.com/) (Minimalistic Ruby framework)
 - [Vue.js](https://vuejs.org/index.html) (Frontend reactive framework)
 - [Element](http://element.eleme.io/#/en-US) (GUI element library for Vue.js)
 - [Chart.js](http://www.chartjs.org/) (Graphs in an HTML5 canvas)
 
-[![BME280](bme280.png)
+![BME280](bme280.png)
 
 # Installation
 

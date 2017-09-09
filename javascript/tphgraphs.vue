@@ -24,7 +24,7 @@
                             <el-radio-button label="31536000">1y</el-radio-button>
                         </el-radio-group>
                     </el-form-item>
-                    <el-form-item label="Time range">
+                    <el-form-item label="Time Range">
                         <el-date-picker v-model="range" type="datetimerange" placeholder=""></el-date-picker>
                     </el-form-item>
                     <el-form-item label="Temperature Range">
