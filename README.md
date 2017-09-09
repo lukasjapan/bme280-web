@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/lukasjapan/bme280-web.svg?branch=master)](https://travis-ci.org/lukasjapan/bme280-web)
 [![Coverage Status](https://coveralls.io/repos/github/lukasjapan/bme280-web/badge.svg?branch=master)](https://coveralls.io/github/lukasjapan/bme280-web?branch=master)
 
-Temperature, Humidity and Air pressure logging/visualization with the Bosch BME280 sensor.
+Temperature, Humidity and Air pressure logging/visualization with the Bosch BME280 sensor. The frontend is reactive and uses live updates.
 
 The following libraries are used:
 
@@ -12,12 +12,12 @@ The following libraries are used:
 - [Element](http://element.eleme.io/#/en-US) (GUI element library for Vue.js)
 - [Chart.js](http://www.chartjs.org/) (Graphs in an HTML5 canvas)
 
+[![BME280](bme280.png)
+
 # Installation
 
 The BME280 must be connected via the I2C interface.
-On default, the device it is expected to be available at `/dev/i2c-1`.
-
-Details of the used BME280 ruby driver: https://github.com/lukasjapan/i2c-bme280
+On default, the device it is expected to be available at `/dev/i2c-1`. (for details refer to the [BME280 ruby driver](https://github.com/lukasjapan/i2c-bme280))
 
 ```bash
 git clone git@github.com:lukasjapan/bme280-web.git
@@ -28,17 +28,16 @@ yarn install
 
 ## Raspberry Pi
 
-Make sure you have a relatively new version of Ruby available.
+Make sure you have a new version of Ruby available.
 Install [rbenv](https://gist.github.com/blacktm/8302741) or similar if needed.
 
-I2C Pin layout: https://pinout.xyz/pinout/i2c
-
+Check the [I2C Pin layout](https://pinout.xyz/pinout/i2c).
 (BCM mode works well for me)
 
 ## Development
 
 I recommend to develop on a desktop machine.
-The BME280 does not need to be available in development mode.
+The BME280 hardware does not need to be available in development mode.
 
 ```bash
 # Initialize DB schema
@@ -47,7 +46,7 @@ bundle exec rake db:migrate
 # Webpack development server for on-the-fly js updates
 ./bin/webpack-dev-server
 
-# Start the logger - in development mode random data is inserted in the database
+# Start the logger - in development mode random data is inserted into the database
 ./bin/bme280-logger
 
 # Start the web frontend
@@ -77,5 +76,5 @@ Default URL: http://localhost:4567 (server listens on 0.0.0.0)
 # TODO
 
 Aggregation of data.
-Currently, raw data will be pulled from the database in 1s steps, even for large ranges.
-Averaged results should be used.
+Currently, raw data will be pulled from the database in 1s steps, even for large time ranges.
+Averaged results should be used in that case.
